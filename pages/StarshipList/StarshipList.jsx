@@ -24,7 +24,7 @@ const StarshipList = () => {
     <div className="container">
       {starshipList.map((starship) => 
         <Link to={`/starships/${starship.url.slice(32)}`}>
-          <div className="link-container" key={starship.url.slice(31)}>
+          <div className="link-container" key={starship.url.slice(32)}>
             {starship.name}
           </div>
         </Link>
