@@ -1,12 +1,21 @@
-import { useState } from 'react'
+// npm modules
+import { Route, Routes } from 'react-router-dom'
+
+//components
+import NavBar from '../components/NavBar'
+import StarshipList from '../pages/StarshipList/StarshipList'
+import StarshipPage from '../components/StarshipPage'
+
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <h1>STAR WARS API</h1>
+      <NavBar />
+      <Routes>
+        <Route path='/' element={<StarshipList />} />
+        <Route path='/starships/:starshipId' element={<StarshipPage />} />
+      </Routes>
     </>
   )
 }
